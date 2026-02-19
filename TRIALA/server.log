@@ -1,0 +1,97 @@
+ * Serving Flask app 'web_app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.177:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-632-129
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /rooms HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room1.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room5.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room2.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room4.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room7.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room6.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:16] "GET /static/images/room3.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:20] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:20] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:21] "GET /rooms HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:21] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:21] "GET /static/images/room4.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room6.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room5.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room7.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room1.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room2.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:22] "GET /static/images/room3.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:23] "GET /guests HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:23] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:23] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:27] "GET /bookings HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:27] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:27] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:29] "GET /reports HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:29] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:29] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:32] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:32] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /rooms HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room4.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room5.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room6.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room7.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room1.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room2.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:34] "GET /static/images/room3.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:56] "GET /bookings HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:07:56] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:07:56] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:13] "POST /bookings HTTP/1.1" 302 -
+127.0.0.1 - - [19/Feb/2026 10:08:13] "GET /bookings HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:08:13] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:13] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /rooms HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room4.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room5.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room6.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room7.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room1.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room2.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:20] "GET /static/images/room3.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:37] "GET /bookings HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:08:37] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:08:37] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:09:00] "GET /invoice/12 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:09:00] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:09:28] "POST /check-out/12 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:09:28] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:09:28] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:10:12] "GET /bookings HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:10:12] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:10:12] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /rooms HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room1.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room2.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room3.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room4.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room5.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room6.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:11:39] "GET /static/images/room7.svg HTTP/1.1" 404 -
+127.0.0.1 - - [19/Feb/2026 10:11:44] "GET /reports HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 10:11:44] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:44] "GET /static/images/hero.svg HTTP/1.1" 304 -
+127.0.0.1 - - [19/Feb/2026 10:11:49] "POST /reports/pdf HTTP/1.1" 200 -

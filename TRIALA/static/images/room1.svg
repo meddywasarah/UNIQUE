@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#fff"/>
+  <rect x="8" y="8" width="284" height="184" rx="8" fill="#f6fbff" stroke="#dbeeff"/>
+  <g fill="#2b6cb0" font-family="Arial,Helvetica,sans-serif">
+    <text x="20" y="60" font-size="26" font-weight="700">Room 101</text>
+    <text x="20" y="100" font-size="16">Single — Cozy bed</text>
+    <text x="20" y="140" font-size="14" fill="#4a5568">$25.00 / night</text>
+  </g>
+</svg>

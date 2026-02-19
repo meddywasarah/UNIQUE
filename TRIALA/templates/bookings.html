@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Bookings</h2>
+  <table border="0" cellpadding="6">
+    <tr><th>ID</th><th>Guest</th><th>Room</th><th>Start</th><th>End</th><th>Status</th><th>Action</th></tr>
+    {% for b in bookings %}
+      <tr>
+        <td>{{b[0]}}</td>
+        <td>{{b[1]}}</td>
+        <td>{{b[2]}}</td>
+        <td>{{b[3]}}</td>
+        <td>{{b[4]}}</td>
+        <td>{{b[5]}}</td>
+        <td>
+          {% if b[5] != 'checked_out' %}
+            <form method="post" action="/check-out/{{b[0]}}" style="display:inline">
+              <button type="submit">Check-out</button>
+            </form>
+          {% endif %}
+          <a href="{{ url_for('invoice', booking_id=b[0]) }}" style="margin-left:8px">Invoice</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  {% if guest_filter %}
+    <p>Showing bookings for <strong>{{ guest_name or guest_filter }}</strong>. <a href="{{ url_for('bookings') }}">Show all</a></p>
+  {% endif %}
+
+  <h3>Check-in</h3>
+  <form method="post">
+    <label>Guest: <select name="guest_id" required>
+      {% for g in guests %}
+        <option value="{{g[0]}}">{{g[1]}}</option>
+      {% endfor %}
+    </select></label><br>
+    <label>Room: <select name="room_id" required>
+      {% for r in rooms %}
+        <option value="{{r[0]}}">{{r[1]}}</option>
+      {% endfor %}
+    </select></label><br>
+    <label>Nights: <input name="nights" type="number" value="1" min="1" required></label><br>
+    <button type="submit">Check-in</button>
+  </form>
+{% endblock %}

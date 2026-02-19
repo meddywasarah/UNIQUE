@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>UNIQUE GUEST HOUSE</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/">UNIQUE</a>
+      <a href="/rooms">ROOMS</a>
+      <a href="/guests">GUESTS</a>
+      <a href="/bookings">BOOKINGS</a>
+      <a href="/reports">REPORTS</a>
+    </nav>
+    <div class="hero">
+      <img src="/static/images/hero.svg" alt="Guest house" />
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for cat, msg in messages %}
+          <div class="flash {{cat}}">{{msg}}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

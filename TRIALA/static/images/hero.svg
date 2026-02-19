@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#6dd3ff"/>
+      <stop offset="1" stop-color="#8ec5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#g)" rx="10"/>
+  <g fill="#fff" font-family="Arial,Helvetica,sans-serif">
+    <text x="50" y="110" font-size="48" font-weight="700">WELCOME TO UNIQUE GUEST HOUSE</text>
+    <text x="50" y="160" font-size="20">Comfortable stays — friendly service</text>
+  </g>
+</svg>

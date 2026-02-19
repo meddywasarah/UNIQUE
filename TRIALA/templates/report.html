@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Monthly Report</h2>
+  <!-- flatpickr month picker (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+  <form method="post">
+    <label>Select month: <input id="month_picker" name="month_year" type="month" value="{% if report %}{{report.year}}-{{"%02d"|format(report.month)}}{% endif %}" required></label>
+    <button type="submit">Generate</button>
+    <button type="submit" formaction="/reports/pdf">Download PDF</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      try{
+        if(window.flatpickr){
+          flatpickr('#month_picker', {
+            plugins: [new monthSelectPlugin({shorthand: false, dateFormat: "Y-m", altFormat: "F Y"})],
+            altInput: true,
+            altFormat: "F Y",
+            dateFormat: "Y-m"
+          });
+        }
+      }catch(e){
+        // fallback: keep native month input
+        console.warn('Month picker init failed', e);
+      }
+    });
+  </script>
+
+  {% if report %}
+    <h3>Report for {{report.year}}-{{"%02d"|format(report.month)}}</h3>
+    <p><strong>Period:</strong> {{report.start}} to {{report.end}}</p>
+    <p><strong>Total bookings:</strong> {{report.total_bookings}}</p>
+    <p><strong>Unique guests:</strong> {{report.unique_guests}}</p>
+    <p><strong>Total revenue (UGX):</strong> {{report.total_ugx}}</p>
+    <p><strong>Total revenue (USD):</strong> {{report.total_usd}}</p>
+    <h4>Guests breakdown</h4>
+    <ul>
+      {% for g in report.guests_breakdown %}
+        <li>{{g[0]}} — {{g[1]}} booking(s)</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

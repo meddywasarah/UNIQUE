@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Guests</h2>
+  <table border="0" cellpadding="6">
+    <tr><th>ID</th><th>Name</th><th>Phone</th><th>NIN Number</th><th></th></tr>
+    {% for g in guests %}
+      <tr>
+        <td>{{g[0]}}</td>
+        <td>{{g[1]}}</td>
+        <td>{{g[2]}}</td>
+        <td>{{ g[3] or '' }}</td>
+        <td><a href="{{ url_for('bookings', guest_id=g[0]) }}">View bookings</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <h3>Register Guest</h3>
+  <form method="post">
+    <label>Name: <input name="name" required></label><br>
+    <label>Phone: <input name="phone" required></label><br>
+    <label>NIN Number: <input name="nin_number"></label><br>
+    <button type="submit">Register</button>
+  </form>
+{% endblock %}

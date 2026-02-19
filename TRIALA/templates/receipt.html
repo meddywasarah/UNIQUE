@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Receipt</h2>
+  <div class="receipt">
+    <p><strong>Booking:</strong> {{receipt.booking_id}}</p>
+    <p><strong>Guest:</strong> {{receipt.guest_name}} ({{receipt.guest_phone}})</p>
+    <p><strong>NIN:</strong> {{receipt.guest_nin or ''}}</p>
+    <p><strong>Room:</strong> {{receipt.room_number}}</p>
+    <p><strong>Start:</strong> {{receipt.start_date}}</p>
+    <p><strong>Checkout:</strong> {{receipt.checkout_date}}</p>
+    <p><strong>Nights:</strong> {{receipt.nights}}</p>
+    <p><strong>Amount (USD):</strong> {{receipt.amount_usd}}</p>
+    <p><strong>Amount (UGX):</strong> {{receipt.amount_ugx}}</p>
+  </div>
+  <p style="margin-top:12px">
+    <button class="print-button" onclick="window.print()">Print receipt</button>
+    <a href="{{ url_for('invoice', booking_id=receipt.booking_id) }}" style="margin-left:12px">Download Invoice (PDF)</a>
+    <a href="/bookings" style="margin-left:12px">Back to bookings</a>
+  </p>
+  <p id="invoice-fallback" style="display:none; margin-top:8px">
+    If the invoice did not open automatically, <a id="invoice-link" href="{{ url_for('invoice', booking_id=receipt.booking_id) }}" target="_blank">click here to open it</a>.
+  </p>
+
+  <script>
+    (function(){
+      // attempt to open invoice in a new tab; if blocked, show fallback link
+      var url = "{{ url_for('invoice', booking_id=receipt.booking_id) }}";
+      setTimeout(function(){
+        var w = window.open(url, '_blank');
+        if(!w){
+          document.getElementById('invoice-fallback').style.display = 'block';
+        }
+      }, 150);
+    })();
+  </script>
+{% endblock %}

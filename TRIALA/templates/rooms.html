@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Rooms</h2>
+  <div class="rooms-grid">
+    {% for r in rooms %}
+      <div class="room-card">
+        <img src="/static/images/room{{ loop.index }}.svg" alt="Room {{r[1]}}">
+          <div class="room-info">
+            <div class="room-number">{{r[1]}}</div>
+            <div class="room-type">{{r[2]}}</div>
+            <div class="room-price">{{ r[5] }}</div>
+            <div class="room-avail">{{ 'Available' if r[4] else 'Occupied' }}</div>
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <h3>Add Room</h3>
+  <form method="post">
+    <label>Number: <input name="number" required></label><br>
+    <label>Type: <input name="type" required></label><br>
+    <label>Price: <input name="price" required type="number" step="0.01"></label><br>
+    <button type="submit">Add</button>
+  </form>
+{% endblock %}
